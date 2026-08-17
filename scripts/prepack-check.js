@@ -7,7 +7,7 @@ import { existsSync, readFileSync, statSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const ROOT = resolve(dirname(fileURLToPath(new URL('..', import.meta.url))))
+const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 const failures = []
 const ok = (msg) => console.log(`  ✓ ${msg}`)
 const fail = (msg) => { failures.push(msg); console.error(`  ✗ ${msg}`) }

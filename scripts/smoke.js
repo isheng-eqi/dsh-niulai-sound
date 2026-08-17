@@ -6,7 +6,7 @@ import { readFileSync, statSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const ROOT = resolve(dirname(fileURLToPath(new URL('..', import.meta.url))))
+const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 
 for (const name of ['mama.wav', 'niulai.wav']) {
   const p = resolve(ROOT, 'assets', name)
