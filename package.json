@@ -32,6 +32,9 @@
   "engines": {
     "node": "^22.19 || >=24"
   },
+  "scripts": {
+    "prepack": "node scripts/prepack-check.js"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
