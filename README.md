@@ -55,6 +55,14 @@ dsh-niulai-sound/
 - DeepSeek Harness Web profile（`dsh web`）
 - Windows（播放依赖 PowerShell + System.Media；macOS/Linux 可自行扩展播放实现）
 
+## 🔧 疑难排查
+
+| 现象 | 处理 |
+|---|---|
+| 弹窗出现但没声音 | 检查系统音量；查看 dsh web 进程输出有无 `[dsh-niulai-sound] play failed:`；确认在 Windows 上运行 |
+| 想换自己的音频 | 设置环境变量 `NLW_MAMA_WAV` / `NLW_NIULAI_WAV` 指向 wav 文件路径（需为 PCM wav） |
+| 发布前自检 | `node scripts/prepack-check.js`（manifest/patch/素材校验）+ `node scripts/smoke.js`（wav 格式与时长） |
+
 ## 📦 社区收录
 
 DSH 社区生态的一部分。已收录进 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)。
