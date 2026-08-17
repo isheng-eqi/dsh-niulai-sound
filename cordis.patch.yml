@@ -1,0 +1,5 @@
+# dsh-niulai-sound — bundle patch: inserts the approval sound plugin row (deployment-global).
+- insert:
+    - id: niulai-sound
+      name: 'dsh-niulai-sound'
+      config: {}

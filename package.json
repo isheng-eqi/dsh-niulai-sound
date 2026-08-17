@@ -1,0 +1,48 @@
+{
+  "name": "dsh-niulai-sound",
+  "version": "1.0.0",
+  "description": "牛来确认音 — DSH approval sound effects from the movie 《牛来》: plays 「妈妈」 when user confirmation is requested, interrupts it and plays 「牛来！」 the moment the user approves. 审批音效：请求确认时播放「妈妈」，批准瞬间掐断并播放「牛来！」。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "niulai",
+    "牛来",
+    "approval",
+    "sound",
+    "audio",
+    "cordis"
+  ],
+  "license": "MIT",
+  "author": "isheng-eqi",
+  "engines": {
+    "node": "^22.19 || >=24"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isheng-eqi/dsh-niulai-sound.git"
+  },
+  "homepage": "https://github.com/isheng-eqi/dsh-niulai-sound#readme",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5.0.0"
+  }
+}
